@@ -1,1 +1,0 @@
-# masahiro-ren.github.io
