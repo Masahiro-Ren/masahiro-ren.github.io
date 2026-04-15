@@ -4,7 +4,7 @@
         <meta name="viewport" content="width=device-width,initial-scale=1">
         <meta charset="UTF-8">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ajusa/lit@latest/dist/lit.css" />
-        <title>任軒正博/Ren Xuanzhengbo</title>
+        <title>任軒正博 / Ren Xuanzhengbo</title>
     </head>
     <style>
         .imagecss {
@@ -48,17 +48,42 @@
             margin: 2px;
         }
 
+        /* Language toggle button */
+        .lang-toggle-btn {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            z-index: 1000;
+            padding: 6px 16px;
+            border: 2px solid #333;
+            border-radius: 4px;
+            background: #fff;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: bold;
+        }
+        .lang-toggle-btn:hover {
+            background: #333;
+            color: #fff;
+        }
+
+        /* Language visibility */
+        html[lang="en"] .lang-ja { display: none; }
+        html[lang="ja"] .lang-en { display: none; }
     </style>
     <body>
+        <button class="lang-toggle-btn" id="langToggle" onclick="toggleLang()">日本語</button>
+
         <div class="c">
             <div class="row">
                 <div class="4 col">
                     <div class="row"><img src="./images/guitar.jpg" class="imagecss"/></div>
                     <div class="row affiliation">
-                        <a href="https://www.hpc.itc.nagoya-u.ac.jp/new">名古屋大学 情報学研究科<br> 片桐・星野研究室</a> 
+                        <span class="lang-en">Information Technology Center, The University of Tokyo</span>
+                        <span class="lang-ja">東京大学 情報基盤センター</span>
                     </div>
                     <div class="row contact">xuanzhengbo.ren@cc.u-tokyo.ac.jp</div>
-                    <div class="row", style="text-align: center;"> 
+                    <div class="row" style="text-align: center;">
                         <a href="https://github.com/Masahiro-Ren"><span class="icon-github"></span></a>
                         <a href="https://scholar.google.com/citations?user=i8s6UIEAAAAJ"><span class="icon-googlescholar"></span></a>
                         <a href="https://researchmap.jp/xuanzhengbo_ren" target="_blank"><span class="icon-researchmap">
@@ -72,160 +97,213 @@
                     </div>
                     <hr>
                     <div class="row">
-                        <b>Educational Background</b>
+                        <b class="lang-en">Educational Background</b>
+                        <b class="lang-ja">学歴</b>
                         <ul>
                             <li>2023.4 - 2026.3 <br>
-                                Doctor of Informatic, <br>
-                                Graduate School of Informatics, Nagoya University 
+                                <a href="https://www.hpc.itc.nagoya-u.ac.jp/new">
+                                    <span class="lang-ja">片桐・星野研究室</span>
+                                    <span class="lang-en">Katagiri &amp; Hoshino Lab</span>
+                                </a><br>
+                                <span class="lang-en">Doctor of Informatics,<br>Graduate School of Informatics, Nagoya University</span>
+                                <span class="lang-ja">名古屋大学 情報学研究科<br>博士（情報学）</span>
                             </li>
-                            <li>2018.9 - 2021.6 <br>  
-                                Master of Engineering,<br>
-                                Computer Network Infomation Center, Chinese Academy of Sciences,
-                                University of Chinese Academy of Sciences
+                            <li>2018.9 - 2021.6 <br>
+                                <span class="lang-en">Master of Engineering,<br>Computer Network Information Center, Chinese Academy of Sciences,<br>University of Chinese Academy of Sciences</span>
+                                <span class="lang-ja">中国科学院大学 コンピュータネットワーク情報センター<br>修士（工学）</span>
                             </li>
-                            <li>2013.9 - 2018.6 <br> 
-                                Bachelor of Engineering, <br>
-                                College of Computer Science and Technology, Harbin Engineering University
+                            <li>2013.9 - 2018.6 <br>
+                                <span class="lang-en">Bachelor of Engineering,<br>College of Computer Science and Technology, Harbin Engineering University</span>
+                                <span class="lang-ja">ハルビン工程大学 コンピュータサイエンス・テクノロジー学院<br>学士（工学）</span>
                             </li>
                         </ul>
                     </div>
                 </div>
             </div>
             <div class="row">
+                <h4 class="lang-en">Experiences</h4>
+                <h4 class="lang-ja">職歴</h4>
+                <ul>
+                    <li>
+                        2026.4 - <span class="lang-en">Present</span><span class="lang-ja">現在</span> <br>
+                        <span class="lang-en">Project Assistant Professor, Information Technology Center, The University of Tokyo</span>
+                        <span class="lang-ja">東京大学 情報基盤センター 特任助教</span>
+                    </li>
+                    <li>
+                        2025.4 - 2026.3 <br>
+                        <span class="lang-en">Junior Research Associate (JRA), RIKEN Center for Computational Science</span>
+                        <span class="lang-ja">理化学研究所 計算科学研究センター 大学院生リサーチ・アソシエイト（JRA）</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="row">
                 <div class="6 col">
-                    <h4>Research Interests: </h4>
+                    <h4 class="lang-en">Research Interests</h4>
+                    <h4 class="lang-ja">研究分野</h4>
                     <ul>
-                        <li>High Performance Computing (HPC)</li>
-                        <li>Software Auto-tuning</li>
-                        <li>Accelerating Atmospheric Simulations</li>
+                        <li><span class="lang-en">High Performance Computing (HPC)</span><span class="lang-ja">ハイパフォーマンスコンピューティング（HPC）</span></li>
+                        <li><span class="lang-en">Software Auto-tuning</span><span class="lang-ja">ソフトウェア自動チューニング</span></li>
                     </ul>
                 </div>
                 <div class="6 col">
-                    <h4>Certifications & Skills: </h4>
+                    <h4 class="lang-en">Certifications &amp; Skills</h4>
+                    <h4 class="lang-ja">資格・スキル</h4>
                     <ul>
-                        <li><strong>Programming:</strong> Python / Fortran / C/C++</li>
-                        <li><strong>Parallel Computing:</strong> OpenMP / Kokkos / MPI / OpenACC</li>
-                        <li><strong>Other Tools:</strong> Node.js</li>
-                        <li><strong>Certifications:</strong> 
-                            <br>- 第三級アマチュア無線士 (Amateur Third-Class Radio Operator)
-                            <br>- 日本語能力試験 (JLPT) N1
+                        <li><strong><span class="lang-en">Programming:</span><span class="lang-ja">プログラミング:</span></strong> Python / Fortran / C/C++</li>
+                        <li><strong><span class="lang-en">Parallel Computing:</span><span class="lang-ja">並列計算:</span></strong> OpenMP / Kokkos / MPI / OpenACC</li>
+                        <li><strong><span class="lang-en">Other Tools:</span><span class="lang-ja">その他ツール:</span></strong> Node.js</li>
+                        <li><strong><span class="lang-en">Certifications:</span><span class="lang-ja">資格:</span></strong>
+                            <br>- <span class="lang-en">Amateur Third-Class Radio Operator</span><span class="lang-ja">第三級アマチュア無線技士</span>
+                            <br>- <span class="lang-en">Japanese Language Proficiency Test (JLPT) N1</span><span class="lang-ja">日本語能力試験（JLPT）N1</span>
                         </li>
-                        <li><strong>Launguages:</strong> 
-                            <br>- 中文/Chinese (Native)
-                            <br>- 日本語/Japanese (Business Level)
-                            <br>- English (Business Level)</li>
+                        <li><strong><span class="lang-en">Languages:</span><span class="lang-ja">言語:</span></strong>
+                            <br>- <span class="lang-en">Chinese (Native)</span><span class="lang-ja">中国語（母語）</span>
+                            <br>- <span class="lang-en">Japanese (Business Level)</span><span class="lang-ja">日本語（ビジネスレベル）</span>
+                            <br>- <span class="lang-en">English (Business Level)</span><span class="lang-ja">英語（ビジネスレベル）</span>
+                        </li>
                     </ul>
                 </div>
             </div>
             <div class="row">
-                <h4>Papers in preparation</h4>
-                    <!-- <li>To be updated</li> -->
-                    <ul>
-                        <li>
-                            <b>Xuanzhengbo Ren</b>, Tetsuya Hoshino, Daichi Mukunoki, and Takahiro Katagiri, "Porting NICAM Microphysics to Kokkos: A Case Study in 
-                            Performance Portability for Atmospheric Models", IPSJ Transactions on Advanced Computing Systems, 2025. <b>(In press)</b>
-                        </li>
-                        <li>
-                            <b>Xuanzhengbo Ren</b>, Yuta Kawai, Tetsuya Hoshino, Hirofumi Tomita, Takahiro Katagiri, Daichi Mukunoki, and Seiya Nishizawa, "Learning-Augmented Performance Model for Tensor Product 
-                            Factorization in High-Order FEM", IEEE Access, 2026. <b>(accepted, minor revision)</b> <a href="https://doi.org/10.48550/arXiv.2601.06886">[Preprint]</a> 
-                        </li>
-                    </ul>
-                <h4>Publications (With peer-review)</h4>
+                <h4 class="lang-en">Papers in Preparation</h4>
+                <h4 class="lang-ja">準備中の論文</h4>
                 <ul>
-                    <!-- <li>To be updated</li> -->
                     <li>
-                        <b>Xuanzhengbo Ren</b>, Yuta Kawai, Hirofumi Tomita, Seiya Nishizawa, Takahiro Katagiri, Tetsuya Hoshino, Masatoshi Kawai, Daichi Mukunoki, Toru Nagai, 
-                        "Performance Evaluation of Loop Body Splitting for Fast Modal Filtering in SCALE-DG on A64FX ",
-                        in Proceedings of the 2025 International Conference on High Performance Computing in Asia-Pacific Region Workshops. Hsinchu Taiwan: ACM, Feb. 2025, pp. 36-44. <a href="https://dl.acm.org/doi/10.1145/3703001.3724385">[DOI:10.1145/3703001.3724385]</a>
+                        <b>Xuanzhengbo Ren</b>, Tetsuya Hoshino, Daichi Mukunoki, and Takahiro Katagiri,
+                        "Porting NICAM Microphysics to Kokkos: A Case Study in Performance Portability for Atmospheric Models,"
+                        <i>IPSJ Transactions on Advanced Computing Systems</i>, 2025. <b>(In press)</b>
+                    </li>
+                </ul>
+                <h4 class="lang-en">Publications (Peer-Reviewed)</h4>
+                <h4 class="lang-ja">出版物（査読付き）</h4>
+                <ul>
+                    <li>
+                        <b>Xuanzhengbo Ren</b>, Yuta Kawai, Tetsuya Hoshino, Hirofumi Tomita, Takahiro Katagiri, Daichi Mukunoki, and Seiya Nishizawa,
+                        "Learning-Augmented Performance Model for Tensor Product Factorization in High-Order FEM,"
+                        <i>IEEE Access</i>, vol. 14, pp. 43679–43693, 2026.
+                        <a href="https://doi.org/10.1109/access.2026.3675604">[DOI]</a>
                     </li>
                     <li>
-                        <b>Xuanzhengbo Ren</b>, Masatoshi Kawai, Tetsuya Hoshino, Takahiro Katagiri, Toru Nagai,
+                        <b>Xuanzhengbo Ren</b>, Yuta Kawai, Hirofumi Tomita, Seiya Nishizawa, Takahiro Katagiri, Tetsuya Hoshino, Masatoshi Kawai, Daichi Mukunoki, and Toru Nagai,
+                        "Performance Evaluation of Loop Body Splitting for Fast Modal Filtering in SCALE-DG on A64FX,"
+                        in <i>Proceedings of the 2025 International Conference on High Performance Computing in Asia-Pacific Region Workshops</i>,
+                        Hsinchu, Taiwan, Feb. 2025, pp. 36–44.
+                        <a href="https://dl.acm.org/doi/10.1145/3703001.3724385">[DOI]</a>
+                    </li>
+                    <li>
+                        <b>Xuanzhengbo Ren</b>, Masatoshi Kawai, Tetsuya Hoshino, Takahiro Katagiri, and Toru Nagai,
                         "Auto-tuning Mixed-precision Computation by Specifying Multiple Regions"
                         <ul>
                             <li>
-                                <b>Journal Version: </b>Concurrency and Computation: Practice and Experience, 2024, Special Issue on Parallel and Distributed Computing and Networking (CANDAR 2023), pp. e8326, <a href="https://doi.org/10.1002/cpe.8326">[DOI:10.1002/cpe.8326]</a>
+                                <b>Journal Version:</b>
+                                <i>Concurrency and Computation: Practice and Experience</i>, Special Issue on CANDAR 2023, pp. e8326, 2024.
+                                <a href="https://doi.org/10.1002/cpe.8326">[DOI]</a>
                             </li>
                             <li>
-                                <b>Conference Version: </b>2023 Eleventh International Symposium on Computing and Networking (CANDAR 2023), Matsue, Japan, 2023, pp. 175-181, <a href="https://doi.org/10.1109/CANDAR60563.2023.00031">[DOI:10.1109/CANDAR60563.2023.00031]</a>
+                                <b>Conference Version:</b>
+                                in <i>2023 Eleventh International Symposium on Computing and Networking (CANDAR 2023)</i>,
+                                Matsue, Japan, 2023, pp. 175–181.
+                                <a href="https://doi.org/10.1109/CANDAR60563.2023.00031">[DOI]</a>
                             </li>
                         </ul>
                     </li>
                     <li>
-                        <b>Xuanzhengbo Ren</b>, Yuqi Zhao, Lin Wu, Jinrong Jiang, Changbin Zhang, Xiao Tang, Lina Han, Mingming Zhu, Zifa Wang,
-                        "Towards efficient digital governance of city air pollution using technique of big atmospheric environmental data",
-                        IOP Conference Series: Earth and Environmental Science, IOP Publishing 2020, Vol. 502(1), pp. 012031 <a href="https://iopscience.iop.org/article/10.1088/1755-1315/502/1/012031">[DOI:10.1088/1755-1315/502/1/012031]</a>
+                        <b>Xuanzhengbo Ren</b>, Yuqi Zhao, Lin Wu, Jinrong Jiang, Changbin Zhang, Xiao Tang, Lina Han, Mingming Zhu, and Zifa Wang,
+                        "Towards Efficient Digital Governance of City Air Pollution Using Technique of Big Atmospheric Environmental Data,"
+                        <i>IOP Conference Series: Earth and Environmental Science</i>, vol. 502, no. 1, pp. 012031, 2020.
+                        <a href="https://iopscience.iop.org/article/10.1088/1755-1315/502/1/012031">[DOI]</a>
                     </li>
                 </ul>
             </div>
             <div class="row">
-                <h4>Posters & Other presentations</h4>
+                <h4 class="lang-en">Posters &amp; Other Presentations</h4>
+                <h4 class="lang-ja">ポスター発表・その他の発表</h4>
                 <ul>
                     <li>
-                        <b>任軒正博</b>, 河合佑太, 富田浩文, 西澤誠也, 片桐孝洋, 星野哲也, 河合直聡, 永井亨.
-                        SCALE-DGのModal Filteringにおけるループボディ分割の自動チューニング. 第197回HPC研究会, 沖縄産業支援センター 沖縄, 2024年12月16日 
+                        <b>任軒正博</b>, 河合佑太, 富田浩文, 西澤誠也, 片桐孝洋, 星野哲也, 河合直聡, 永井亨,
+                        「SCALE-DGのModal Filteringにおけるループボディ分割の自動チューニング」,
+                        第197回HPC研究会, 沖縄産業支援センター, 沖縄, 2024年12月16日.
                     </li>
                     <li>
-                        <b>Xuanzhengbo Ren</b>, Yuta Kawai, Hirofumi Tomita, Seiya Nishizawa, Takahiro Katagiri, Masatoshi Kawai, Toru Nagai, 
-                        "Implementing Fast Modal Filtering of SCALE-DG", 2024 IEEE International Conference on Cluster Computing Workshops (CLUSTER Workshops), Kobe, Japan, 2024, pp. 150-151, <a href="https://doi.org/10.1109/CLUSTERWorkshops61563.2024.00033">[DOI:10.1109/CLUSTERWorkshops61563.2024.00033.]</a>. [Research Poster]
+                        <b>Xuanzhengbo Ren</b>, Yuta Kawai, Hirofumi Tomita, Seiya Nishizawa, Takahiro Katagiri, Masatoshi Kawai, and Toru Nagai,
+                        "Implementing Fast Modal Filtering of SCALE-DG,"
+                        in <i>2024 IEEE International Conference on Cluster Computing Workshops (CLUSTER Workshops)</i>,
+                        Kobe, Japan, 2024, pp. 150–151.
+                        <a href="https://doi.org/10.1109/CLUSTERWorkshops61563.2024.00033">[DOI]</a> [Research Poster]
                     </li>
                     <li>
-                        <b>任軒正博</b>, 河合佑太，富田浩文, 片桐孝洋, 西澤誠也, 星野哲也, 河合直聡, 永井亨. 不連続ガラーキン法を基づいた大気力学コアの性能評価と改善について. 第193回HPC研究会, 北海道大学 札幌, 2024年3月18日.
+                        <b>任軒正博</b>, 河合佑太, 富田浩文, 片桐孝洋, 西澤誠也, 星野哲也, 河合直聡, 永井亨,
+                        「不連続ガラーキン法を基づいた大気力学コアの性能評価と改善について」,
+                        第193回HPC研究会, 北海道大学, 札幌, 2024年3月18日.
                     </li>
                     <li>
-                        <b>Xuanzhengbo Ren</b>, Yuta Kawai, Hirofumi Tomita, Takahiro Katagiri, Seiya Nishizawa, Tetsuya Hoshino, Masatoshi Kawai, Toru Nagai, 
-                        "An Evaluation of Discontinuous Galerkin Method based Global Nonhydrostatic Atmospheric Dynamical Core on A64FX Platform", HPC Asia 2024, Nagoya, Japan. [Research Poster]<a href="https://sighpc.ipsj.or.jp/HPCAsia2024/posters/ren_poster.pdf">[Poster No.10]</a>
+                        <b>Xuanzhengbo Ren</b>, Yuta Kawai, Hirofumi Tomita, Takahiro Katagiri, Seiya Nishizawa, Tetsuya Hoshino, Masatoshi Kawai, and Toru Nagai,
+                        "An Evaluation of Discontinuous Galerkin Method based Global Nonhydrostatic Atmospheric Dynamical Core on A64FX Platform,"
+                        <i>HPC Asia 2024</i>, Nagoya, Japan, 2024.
+                        <a href="https://sighpc.ipsj.or.jp/HPCAsia2024/posters/ren_poster.pdf">[Poster]</a>
                     </li>
                 </ul>
             </div>
             <div class="row">
-                <h4>Experiences</h4>
-                <ul>
-                    <li>
-                        2025.4 - 2026.3 <br>
-                        理化学研究所 計算科学研究センター 大学院生リサーチ・アソシエイト(JRA)
-                    </li>
-                    <li>
-                        2023.9 - 2023.10 <br>
-                        理化学研究所 計算科学研究センター 計算科学インターンシップ・プログラム 実習生
-                    </li>
-                </ul>
-
-                <h4>Scholarship</h4>
+                <h4 class="lang-en">Scholarship</h4>
+                <h4 class="lang-ja">奨学金</h4>
                 <ul>
                     <li>
                         2024.4 - 2026.3 <br>
-                        東海国立大学機構 メイク・ニュー・スタンダード次世代研究事業
+                        <span class="lang-en">Tokai National Higher Education and Research System, Make New Standard Next-Generation Research Project</span>
+                        <span class="lang-ja">東海国立大学機構 メイク・ニュー・スタンダード次世代研究事業</span>
                     </li>
                 </ul>
 
-                <h4>Additional Education / Courses</h4>
+                <h4 class="lang-en">Additional Education / Courses</h4>
+                <h4 class="lang-ja">その他の教育・講座</h4>
                 <ul>
                     <li>
                         2022.4 - 2023.3 <br>
-                        亜細亜友之会外語学院, Tokyo, Japan - Intensive Japanese course
+                        <span class="lang-en">亜細亜友之会外語学院, Tokyo, Japan — Intensive Japanese Course</span>
+                        <span class="lang-ja">亜細亜友之会外語学院, 東京 — 日本語集中コース</span>
                     </li>
                 </ul>
             </div>
             <div class="row">
-                <h4>Joint Projects</h4>
+                <h4 class="lang-en">Joint Projects</h4>
+                <h4 class="lang-ja">共同プロジェクト</h4>
                 <ul>
-                    <li><a href="https://ywkawai.github.io/FE-Project_web/">FE-Project(SCALE-DG) (contirbutor of investigating and improving computational performance)</a></li>
+                    <li>
+                        <a href="https://ywkawai.github.io/FE-Project_web/">FE-Project (SCALE-DG)</a>
+                        <span class="lang-en"> — Contributor: investigating and improving computational performance</span>
+                        <span class="lang-ja"> — 計算性能の調査と改善に貢献</span>
+                    </li>
                 </ul>
             </div>
             <div class="row">
                 <div class="6 col">
-                    <h4>Hobbies</h4>
+                    <h4 class="lang-en">Hobbies</h4>
+                    <h4 class="lang-ja">趣味</h4>
                     <ul>
-                        <li>Guitar</li>
-                        <li>Japanese Animation</li>
-                        <li>Photographing & Film Photographing</li>
+                        <li><span class="lang-en">Guitar</span><span class="lang-ja">ギター</span></li>
+                        <li><span class="lang-en">Japanese Animation</span><span class="lang-ja">アニメ</span></li>
+                        <li><span class="lang-en">Photography &amp; Film Photography</span><span class="lang-ja">写真撮影・フィルム写真</span></li>
                     </ul>
                 </div>
                 <div class="6 col">
                 </div>
             </div>
         </div>
-        <div class="copyright">&copy;Ren Xuanzhengbo</div>
+        <div class="copyright">&copy; Ren Xuanzhengbo</div>
 
+        <script>
+            function toggleLang() {
+                var html = document.documentElement;
+                var btn = document.getElementById('langToggle');
+                if (html.lang === 'en') {
+                    html.lang = 'ja';
+                    btn.textContent = 'English';
+                } else {
+                    html.lang = 'en';
+                    btn.textContent = '日本語';
+                }
+            }
+        </script>
     </body>
 </html>
